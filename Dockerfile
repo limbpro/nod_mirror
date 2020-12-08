@@ -33,4 +33,4 @@ RUN echo '0 */1 * * * root /usr/bin/php /var/www/eset_mirror_script/update.php -
 RUN touch /var/www/eset_mirror_script/log/log_cron.txt
 
 # Запускаем cron
-#CMD ["cron", "-f"]
+CMD ["cron", "-f"]
