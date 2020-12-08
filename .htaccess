@@ -1,0 +1,25 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(EES|EEA|EFSW)\ Update.*BPC\ 6
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/ep6/update.ver [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(EES|EEA|EFSW)\ Update.*BPC\ ([7-8]+)
+RewriteRule ^(dll/)?update.ver$ /eset_upd/ep%2/dll/update.ver [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(EES|EEA|EFSW)\ Update.*BPC
+RewriteRule ^(dll/)?update\.ver$ - [F]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*Update.*BPC\ 5
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/v5/update.ver [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*Update.*BPC\ ([3-8]+)
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/v3/update.ver [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*Update.*BPC\ 9
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/v9/update.ver [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*Update.*BPC\ (10|11)
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/v10/dll/update.ver [L]
+
+RewriteCond %{HTTP_USER_AGENT} ^.*Update.*BPC\ (1[2-9]+)
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/v%1/dll/update.ver [L]
