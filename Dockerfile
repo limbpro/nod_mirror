@@ -24,7 +24,7 @@ RUN git clone https://github.com/limbpro/nod_mirror.git
 RUN mv /nod_mirror/nod32ms.conf /var/www/eset_mirror_script/
 RUN mkdir -p /var/www/eset_mirror_script/log
 RUN mkdir -p /var/www/eset_mirror_script/www/
-RUN mv /nod_mirror/.htaccess /var/www/eset_mirror_script/www/
+RUN cp /nod_mirror/.htaccess /var/www/eset_mirror_script/www/
 RUN rm -r /nod_mirror
 RUN find /var/www/eset_mirror_script -type f -name '*.php' -exec chmod +x {} \;
 
