@@ -1,4 +1,4 @@
-# Version: 0.0.1
+# Version: 1.0.2
 
 # Используем за основу контейнера Ubuntu 18.04 LTS
 FROM ubuntu:18.04
@@ -21,7 +21,7 @@ RUN ln -sf /usr/share/zoneinfo/Europe/Kiev /etc/localtime
 RUN git clone https://github.com/Kingston-kms/eset_mirror_script.git
 RUN mv /eset_mirror_script /var/www/
 RUN git clone https://github.com/limbpro/nod_mirror.git
-RUN mv /nod_mirror/nod32ms.conf /var/www/eset_mirror_script/
+RUN cp /nod_mirror/nod32ms.conf /var/www/eset_mirror_script/
 RUN mkdir -p /var/www/eset_mirror_script/log
 RUN mkdir -p /var/www/eset_mirror_script/www/
 #RUN rm -r /nod_mirror
