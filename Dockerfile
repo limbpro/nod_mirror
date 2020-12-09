@@ -24,8 +24,7 @@ RUN git clone https://github.com/limbpro/nod_mirror.git
 RUN cp /nod_mirror/nod32ms.conf /var/www/eset_mirror_script/
 RUN mkdir -p /var/www/eset_mirror_script/log
 RUN mkdir -p /var/www/eset_mirror_script/www/
-#RUN rm -r /nod_mirror
-Run cat /var/www/eset_mirror_script/nod32ms.conf
+RUN rm -r /nod_mirror
 RUN find /var/www/eset_mirror_script -type f -name '*.php' -exec chmod +x {} \;
 
 # Настройка cron
