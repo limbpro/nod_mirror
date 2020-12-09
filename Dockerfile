@@ -1,4 +1,4 @@
-# Version: 1.0.2
+# Version: 1.0.3
 
 # Используем за основу контейнера Ubuntu 18.04 LTS
 FROM ubuntu:18.04
@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Добавляем необходимые репозитарии и устанавливаем пакеты
 RUN apt-get update
-RUN apt-get install -y wget curl git unrar-free cron php php-curl tzdata nano
+RUN apt-get install -y wget curl git unrar-free cron php php-curl tzdata nano mc
 RUN apt-get clean
 
 # Устанавливаем локаль
