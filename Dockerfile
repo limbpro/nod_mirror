@@ -26,6 +26,7 @@ RUN mkdir -p /var/www/eset_mirror_script/log
 RUN mkdir -p /var/www/eset_mirror_script/www/
 RUN cp /nod_mirror/.htaccess /var/www/eset_mirror_script/www/
 RUN rm -r /nod_mirror
+Run cat /var/www/eset_mirror_script/nod32ms.conf
 RUN find /var/www/eset_mirror_script -type f -name '*.php' -exec chmod +x {} \;
 
 # Настройка cron
