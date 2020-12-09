@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 
 # Добавляем необходимые репозитарии и устанавливаем пакеты
 RUN apt-get update
-RUN apt-get install -y wget curl git unrar-free cron php php-curl tzdata
+RUN apt-get install -y wget curl git unrar-free cron php php-curl tzdata nano
 RUN apt-get clean
 
 # Устанавливаем локаль

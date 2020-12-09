@@ -1,5 +1,8 @@
 RewriteEngine on
 
+RewriteCond %{HTTP_USER_AGENT} ^.*(EES|EEA)\ Update.*BPC\ 5
+RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/ep5/update.ver [L]
+
 RewriteCond %{HTTP_USER_AGENT} ^.*(EES|EEA|EFSW)\ Update.*BPC\ 6
 RewriteRule ^(eset_upd/)?update.ver$ /eset_upd/ep6/update.ver [L]
 
